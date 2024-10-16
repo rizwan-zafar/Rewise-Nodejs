@@ -12,7 +12,7 @@ app.get('/', (req, resp, next) => {
 });
 
 app.use(shopRoutes);
-app.use(adminRoutes);
+app.use('/admin',adminRoutes); //i have added '/admin' so now in url we need to add just /admin/routeinadmin
 app.use((req,resp,next)=> resp.status(404).send("<h1>Page Not Found</h1>"))
 
 
