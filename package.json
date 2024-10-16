@@ -1,0 +1,24 @@
+{
+  "name": "rewise-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizwan-zafar/Rewise-Nodejs.git"
+  },
+  "author": "rizwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizwan-zafar/Rewise-Nodejs/issues"
+  },
+  "homepage": "https://github.com/rizwan-zafar/Rewise-Nodejs#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
