@@ -13,6 +13,7 @@ app.get('/', (req, resp, next) => {
 
 app.use(shopRoutes);
 app.use(adminRoutes);
+app.use((req,resp,next)=> resp.status(404).send("<h1>Page Not Found</h1>"))
 
 
 
