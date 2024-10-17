@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <header style="background-color: #333; padding: 15px;">
+        <nav>
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;">
+                <li><a href="/student" style="color: white; text-decoration: none; font-size: 18px;">Students</a></li>
+                <li><a href="/student/add-student" style="color: white; text-decoration: none; font-size: 18px;">Add Student</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Student Form</h1>
+    <form method="post" action="/student" style="display: flex; gap: 10px; align-items: center;">
+        <input type="text" name="title" placeholder="Enter title"
+            style="padding: 5px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; width: 200px;" />
+        <input type="submit" value="Submit"
+            style="padding: 5px 15px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;" />
+    </form>
+
+</body>
+
+</html>
