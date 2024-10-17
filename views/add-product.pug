@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{docTitle}
+    link(rel="stylesheet" href="/css/product.css")
+  
+  body
+    include header.pug
+
+    .form-container
+      div Title
+      form(method="post" action="/admin/add-product")
+        input(type="text" name="title" placeholder="Product Name")
+        input(type="submit" value="Submit")
