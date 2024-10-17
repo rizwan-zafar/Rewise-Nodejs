@@ -4,20 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students Page</title>
+    <title>Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
-    <header style="background-color: #333; padding: 15px;">
+<body>
+    <header>
         <nav>
-            <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;">
-                <li><a href="/" style="color: white; text-decoration: none; font-size: 18px;">Shop</a></li>
-                <li><a href="/add-product" style="color: white; text-decoration: none; font-size: 18px;">Add Product</a></li>
+            <ul>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/admin/add-product">Add Product</a></li>
             </ul>
         </nav>
     </header>
-    <main style="padding: 20px;">
-        <h1 style="font-size: 24px; color: #333;">Students Page - List of All Students</h1>
+    <main>
+        <h1>Students Page - List of All Students</h1>
     </main>
 </body>
 
