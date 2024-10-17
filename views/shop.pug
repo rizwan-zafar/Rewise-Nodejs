@@ -1,15 +1,8 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title #{docTitle}
+extends layouts/main-layout.pug
+block styles 
     link(rel="stylesheet" href="/css/main.css")
     link(rel="stylesheet" href="/css/card.css")
-  
-  body
-    include header.pug
-
+block content
     main
       .product-grid
         if products.length > 0
@@ -26,3 +19,33 @@ html(lang="en")
                 button.add-to-cart Add to Cart
         else
           h1 No Products found
+
+
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title #{docTitle}
+//-     link(rel="stylesheet" href="/css/main.css")
+//-     link(rel="stylesheet" href="/css/card.css")
+  
+//-   body
+//-     include header.pug
+
+//-     main
+//-       .product-grid
+//-         if products.length > 0
+//-           each prods in products
+//-             .product-card
+//-               .product-image
+//-                 img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s" alt="Product Image")
+//-               .product-details
+//-                 h2.product-name #{prods.title}
+//-                 p.product-description Garnier Pure Active Micellar Cleansing Water, 125 ml
+//-                 p.product-price $60
+//-                 .product-rating
+//-                   span ★★★★★
+//-                 button.add-to-cart Add to Cart
+//-         else
+//-           h1 No Products found
