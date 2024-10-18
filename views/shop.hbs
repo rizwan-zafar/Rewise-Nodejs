@@ -24,7 +24,9 @@
     </main>
 </body>
 
+
 <div class="product-grid">
+{{#if hasProdcuts }}
   <div class="product-card">
     <div class="product-image">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s" alt="Product Image">
@@ -39,21 +41,10 @@
       <button class="add-to-cart">Add to Cart</button>
     </div>
   </div>
-
-  <div class="product-card">
-    <div class="product-image">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s" alt="Product Image">
-    </div>
-    <div class="product-details">
-      <h2 class="product-name">Product 2 Title</h2>
-      <p class="product-description">Garnier Pure Active Micellar Cleansing Water, 125 ml</p>
-      <p class="product-price">$60</p>
-      <div class="product-rating">
-        <span>★★★★★</span>
-      </div>
-      <button class="add-to-cart">Add to Cart</button>
-    </div>
-  </div>
+{{else}}
+    <h2>Product Not Found</h2>
+{{/if}}
+ 
 
   
 
