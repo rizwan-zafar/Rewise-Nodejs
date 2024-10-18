@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-    <link rel="stylesheet" href="/css/main.css">
-
+    <title>{{docTitle}}</title>
+    <link rel="stylesheet" href="/css/product.css">
 </head>
 
 <body>
@@ -18,9 +17,14 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Students Page - List of All Students</h1>
-    </main>
+
+    <div class="form-container">
+        <div>Title</div>
+        <form method="post" action="/admin/add-product">
+            <input type="text" name="title" placeholder="Product Name" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
 </body>
 
 </html>
