@@ -9,6 +9,7 @@ router.get("/", (req, resp, next) => {
     docTitle: "Shops",
     hasProdcuts: adminData.products.length > 0,
     activeShop: true,
+    shopCss:true
   });
   // resp.sendFile(path.join(__dirname, "../", "views", "shop.html")); //    ../vews/shop.html
 });

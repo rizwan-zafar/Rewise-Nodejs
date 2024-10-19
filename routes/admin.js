@@ -8,7 +8,11 @@ router.get("/", (req, resp, next) => {
 });
 
 router.get("/add-product", (req, resp, next) => {
-  resp.render("add-product", { docTitle: "Add Product", activeProduct: true });
+  resp.render("add-product", {
+    docTitle: "Add Product",
+    activeProduct: true,
+    productCss: true,
+  });
 });
 router.post("/add-product", (req, resp, next) => {
   products.push({ title: req.body.title });
