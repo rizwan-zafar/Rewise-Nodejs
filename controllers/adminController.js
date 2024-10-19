@@ -8,7 +8,13 @@ exports.getAddProduct = (req, resp, next) => {
 };
 
 exports.postAddProduct = (req, resp, next) => {
-  const product=new Product(req.body.title)
+  const productData={
+    title:req.body.title,
+    price:req.body.price,
+    description:req.body.description,
+    imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s'
+  }
+  const product=new Product(productData)
   product.save()
   resp.redirect("/");
 };

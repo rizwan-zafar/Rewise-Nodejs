@@ -1,1 +1,8 @@
-[{"title":"hgjk"},{"title":"adf"},{"title":""},{"title":"adf"},{"title":"Gajar "},{"title":"adf"},{"title":"Orange"},{"title":"adf"},{"title":"adfasdfasdfsa"}]
+[
+    {
+        "title": "Gajar",
+        "price": "30",
+        "description": "this is my first product that i am adding from admin panel as admin",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s"
+    }
+]

@@ -5,7 +5,10 @@ const products = [];
 
 module.exports = class Product {
   constructor(t) {
-    this.title = t;
+    this.title = t.title;
+    this.price=t.price;
+    this.description=t.description;
+    this.imageUrl=t.imageUrl
   }
   save() {
 
