@@ -8,7 +8,7 @@ router.get('/',(req,resp,next)=>{
 })
 
 router.get("/add-product", (req, resp, next) => {
-    resp.render('add-product',{docTitle:'Add Products'});
+    resp.render('add-product',{docTitle:'Add Products',path:'/admin/add-product'});
   });
   router.post("/add-product", (req, resp, next) => {
     products.push({title:req.body.title})
