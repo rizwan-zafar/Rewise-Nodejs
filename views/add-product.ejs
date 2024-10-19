@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= docTitle %></title>
-    <link rel="stylesheet" href="/css/product.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Shop</a></li>
-                <li><a href="/admin/add-product">Add Product</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<%- include('includes/head.ejs') %>
+<%- include('includes/navbar.ejs') %>
     <div class="form-container">
         <div>Title</div>
         <form method="post" action="/admin/add-product">
@@ -25,6 +7,4 @@
             <input type="submit" value="Submit" />
         </form>
     </div>
-</body>
-
-</html>
+<%- include('includes/end.ejs') %>
