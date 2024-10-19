@@ -15,6 +15,7 @@ app.engine(
     extname: ".hbs",
     layoutsDir: "views/layouts",
     defaultLayout: "main-layout",
+    partialsDir:"views/partials"
   })
 );
 app.set("view engine", "hbs"); //setting handlebar as template engine
