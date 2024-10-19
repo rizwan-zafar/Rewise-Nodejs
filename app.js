@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname,'public')))  // used to import static folder like public - now we are able to access css files in pages
 
 const {engine}=require('express-handlebars')
-app.engine('hbs',engine({extname:'.hbs',defaultLayout:false }))
+app.engine('hbs',engine({extname:'.hbs',layoutsDir:'views/layouts', defaultLayout:'main-layout' }))
 app.set('view engine', 'hbs') //setting handlebar as template engine
 app.set('views','views') //2nd parameter will be name of folder where are views/hbsFile are placed
 
