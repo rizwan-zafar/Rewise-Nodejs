@@ -19,3 +19,15 @@ exports.postAddProduct = (req, resp, next) => {
   resp.redirect("/");
 };
 
+
+
+
+exports.getAllProducts =  (req, resp, next) => {
+    Product.fetchAll(product => {
+      resp.render("admin/product-list", {
+        products: product,  
+        docTitle: "Admin - Product List",
+        path: "/admin/product-list",
+      });
+    })
+  };

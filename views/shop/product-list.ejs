@@ -1,4 +1,5 @@
 <%- include('../includes/head.ejs') %>
+  <link rel="stylesheet" href="/css/card.css">
   <%- include('../includes/navbar.ejs') %>
     <main>
       <div class="product-grid">
@@ -7,15 +8,18 @@
           <% for (let product of products) {%>
             <div class="product-card">
               <div class="product-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s"
-                  alt="Product Image" />
+                <img src=" <%= product.imageUrl %>" alt="Product Image" />
               </div>
               <div class="product-details">
                 <h2 class="product-name">
                   <%= product.title %>
                 </h2>
-                <p class="product-description">  <%= product.description %></p>
-                <p class="product-price">  <%= product.price %>$</p>
+                <p class="product-description">
+                  <%= product.description %>
+                </p>
+                <p class="product-price">
+                  <%= product.price %>$
+                </p>
                 <div class="product-rating">
                   <span>★★★★★</span>
                 </div>

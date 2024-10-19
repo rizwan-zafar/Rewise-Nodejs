@@ -1,0 +1,52 @@
+<%- include('../includes/head.ejs') %>
+  <link rel="stylesheet" href="/css/admin-productlist.css">
+  <%- include('../includes/navbar.ejs') %>
+    <main>
+      <div class="product-table-container">
+        <% if(products.length>0 ){ %>
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let product of products) {%>
+                <tr>
+                  <td class="product-image">
+                    <img src="<%= product.imageUrl %>" alt="Product Image" />
+                  </td>
+                  <td class="product-name">
+                    <%= product.title %>
+                  </td>
+                  <td class="product-description">
+                    <%= product.description %>
+                  </td>
+                  <td class="product-price">
+                    <%= product.price %>$
+                  </td>
+                  <td class="product-actions">
+                    <button class="edit-btn" data-tooltip="Edit Product">
+                       <img src="/icons/pen-to-square-solid.svg" alt="Delete Icon" class="icon-img"> 
+                    </button>
+                    <button class="delete-btn" data-tooltip="Delete Product">
+                        <img src="/icons/trash-solid.svg" alt="Delete Icon" class="icon-img"> 
+                    </button>
+                  </td>
+                </tr>
+                <% } %>
+            </tbody>
+          </table>
+          <% } else { %>
+            <h1> Product Not Found</h1>
+            <% } %>
+      </div>
+    </main>
+
+
+
+    <%- include('../includes/end.ejs') %>
