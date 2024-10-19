@@ -1,4 +1,4 @@
-const products = [];
+const Product = require('../models/product')
 
 exports.getAddProduct = (req, resp, next) => {
   resp.render("add-product", {
@@ -8,13 +8,14 @@ exports.getAddProduct = (req, resp, next) => {
 };
 
 exports.postAddProduct = (req, resp, next) => {
-  products.push({ title: req.body.title });
+  const product=new Product(req.body.title)
+  product.save()
   resp.redirect("/");
 };
 
 exports.getAllProducts = (req, resp, next) => {
   resp.render("shop", {
-    products: products,
+    products: Product.fetchAll(), // static method directly called with Class not with its instance
     docTitle: "Shops",
     path: "/",
   });
