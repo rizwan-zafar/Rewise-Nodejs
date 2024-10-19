@@ -8,13 +8,13 @@ const path=require('path')
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname,'public')))  // used to import static folder like public - now we are able to access css files in pages
 
-app.set('view engine', 'pug') //setting pug as template engine
+app.set('view engine', 'ejs') //setting pug as template engine
 app.set('views','views') //2nd parameter will be name of folder where are views/pugFile are placed
 
 
 app.use("/",shopeRoutes);
 app.use('/admin',adminRoutes.router); //i have added '/admin' so now in url we need to add just /admin/routeinadmin
-app.use((req,resp,next)=> resp.status(404).sendFile(path.join(__dirname,'views','404.html')))
+app.use((req,resp,next)=> resp.status(404).render('404',{docTitle:'404 - Not Found'}))
 
 
 
