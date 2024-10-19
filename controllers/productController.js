@@ -13,10 +13,14 @@ exports.postAddProduct = (req, resp, next) => {
   resp.redirect("/");
 };
 
-exports.getAllProducts = (req, resp, next) => {
-  resp.render("shop", {
-    products: Product.fetchAll(), // static method directly called with Class not with its instance
-    docTitle: "Shops",
-    path: "/",
-  });
+exports.getAllProducts = async (req, resp, next) => {
+  Product.fetchAll(product => {
+    resp.render("shop", {
+      products: product,  
+      docTitle: "Shops",
+      path: "/",
+    });
+  })
+ 
+ 
 };

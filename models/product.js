@@ -1,15 +1,41 @@
-const products=[]
-module.exports = class Product{
-    constructor(t){
-        this.title=t;
-    }
-    save()
-    {
-        products.push(this)
-    }
+const fs = require("fs");
+const path = require("path");
+const p = path.join(__dirname, "../", "data", "product.json");
+const products = [];
 
-    static fetchAll()
-    {
-        return products
-    }
-}
+module.exports = class Product {
+  constructor(t) {
+    this.title = t;
+  }
+  save() {
+
+    // first we are reading content from file then adding new object and writing file
+  
+    fs.readFile(p, (error, fileContent) => {
+      let products = [];
+      try {
+        if (!error) {
+          products = JSON.parse(fileContent);
+        }
+        products.push(this);
+        fs.writeFile(p, JSON.stringify(products), (error) => {
+          console.log(error);
+        });
+      } catch (error) {
+        products = [];
+      }
+    });
+  }
+
+  static fetchAll(cb) {
+
+    fs.readFile(p,(error,fileContent)=>{
+        if(error)
+        {
+            cb([])
+        }
+
+       cb(JSON.parse(fileContent))
+    })
+  }
+};
