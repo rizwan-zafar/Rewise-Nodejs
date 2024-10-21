@@ -5,6 +5,7 @@ const products = [];
 
 module.exports = class Product {
   constructor(t) {
+    this.id = t.id;
     this.title = t.title;
     this.price=t.price;
     this.description=t.description;

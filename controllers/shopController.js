@@ -17,3 +17,14 @@ exports.getAllProducts =  (req, resp, next) => {
         path: "/",
       })
   })
+
+  exports.getProductDetail = ((req,resp,send)=>{
+  const productId=req.params.id
+    console.log("req",productId)
+    resp.render('shop/product-detail', {
+        docTitle: "Product Detail",
+        path:'/products'
+      })
+  })
+
+ 

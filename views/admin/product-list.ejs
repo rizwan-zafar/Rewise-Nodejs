@@ -7,6 +7,7 @@
           <table class="product-table">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Image</th>
                 <th>Product Name</th>
                 <th>Description</th>
@@ -17,6 +18,9 @@
             <tbody>
               <% for (let product of products) {%>
                 <tr>
+                  <td class="product-price">
+                    <%= product.id %>
+                  </td>
                   <td class="product-image">
                     <img src="<%= product.imageUrl %>" alt="Product Image" />
                   </td>

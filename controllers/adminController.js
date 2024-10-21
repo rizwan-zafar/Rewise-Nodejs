@@ -9,6 +9,7 @@ exports.getAddProduct = (req, resp, next) => {
 
 exports.postAddProduct = (req, resp, next) => {
   const productData={
+    id:Math.floor(Math.random() * 50) + 1,
     title:req.body.title,
     price:req.body.price,
     description:req.body.description,
