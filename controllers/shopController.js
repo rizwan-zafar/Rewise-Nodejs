@@ -19,9 +19,9 @@ exports.getIndex = (req, resp, send) => {
 
 exports.getProductDetail = (req, resp, send) => {
   const productId = req.params.id;
-  Product.findById(productId, (product) => {
+  Product.findById(productId,product => {
     resp.render("shop/product-detail", {
-      docTitle: "Product Detail",
+      docTitle: product.title,
       path: "/products",
       product:product
     });

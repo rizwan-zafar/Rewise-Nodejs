@@ -19,5 +19,12 @@
         "price": "45",
         "description": "aadf asdf asdf asdf asdf asdf asd fads f",
         "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s"
+    },
+    {
+        "id": 7,
+        "title": "Orange",
+        "price": "56",
+        "description": "this is my first product that i am adding from admin panel as admin this is my first product that i am adding from admin panel as admin this is my first product that i am adding from admin panel as admin this is my first product that i am adding from admin panel as admin",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kjiAPB0HjVXFTmD-uKxcphqm_qN3P2UC4g&s"
     }
 ]

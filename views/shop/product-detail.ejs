@@ -1,9 +1,78 @@
 <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/product-detail.css">
 <%- include('../includes/navbar.ejs') %>
-<h1>Product Detail Page</h1>
-<%= product.id %>
-<%= product.title %>
-<%= product.price %>
-<%= product.description %>
-<%= product.imageUrl %>
+
+<div class="product-page">
+    <!-- Product Overview Section -->
+    <div class="product-overview">
+      <div class="product-image">
+        <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+      </div>
+      <div class="product-info">
+        <h1 class="product-title"><%= product.title.toUpperCase() %></h1>
+        <p class="short-description"><%= product.description %></p>
+        <p class="price">Price: $<%= product.price %>/kg</p>
+        <p class="availability"><span class="in-stock">In Stock</span></p>
+        <p class="discount">Buy 2kg, get 10% off</p>
+        <a href="/cart/add/<%= product.id %>" class="btn btn-add-to-cart">Add to Cart</a>
+      </div>
+    </div>
+  
+    <!-- Section Cards -->
+    <div class="section-cards">
+      <!-- Product Specifications -->
+      <div class="section-card product-specifications">
+        <h2>Specifications</h2>
+        <ul>
+          <li><strong>Category:</strong> Fruit</li>
+          <li><strong>Weight Options:</strong> 500g, 1kg, 2kg</li>
+          <li><strong>Origin:</strong> Local Farm, California</li>
+          <li><strong>Type:</strong> Organic</li>
+        </ul>
+      </div>
+  
+      <!-- Health Benefits -->
+      <div class="section-card health-benefits">
+        <h2>Health Benefits</h2>
+        <ul>
+          <li><strong>Calories:</strong> 52 per 100g</li>
+          <li>Rich in Vitamin C, Potassium, and Fiber</li>
+          <li>Promotes heart health and digestion</li>
+        </ul>
+      </div>
+  
+      <!-- Usage and Storage -->
+      <div class="section-card usage-storage">
+        <h2>Usage & Storage</h2>
+        <ul>
+          <li>Great for snacking, salads, or juicing.</li>
+          <li>Keep refrigerated to maintain freshness for up to 2 weeks.</li>
+        </ul>
+      </div>
+  
+      <!-- Delivery Information -->
+      <div class="section-card delivery-info">
+        <h2>Delivery</h2>
+        <ul>
+          <li>Home delivery available within 24 hours.</li>
+          <li>Available for pickup from our local store.</li>
+          <li>Delivery Areas: California, Nevada, Arizona.</li>
+        </ul>
+      </div>
+  
+      <!-- Customer Reviews and Ratings -->
+      <!-- <div class="section-card reviews">
+        <h2>Customer Reviews & Ratings</h2>
+        <div class="rating">
+          <span>⭐⭐⭐⭐☆</span> (4.5/5 from 120 reviews)
+        </div>
+        <div class="review">
+          <p><strong>John Doe</strong>: "These apples are the best! So fresh and crisp. I highly recommend them!"</p>
+        </div>
+        <div class="review">
+          <p><strong>Jane Smith</strong>: "Great flavor and texture. Perfect for my morning smoothies."</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
 <%- include('../includes/end.ejs') %>
