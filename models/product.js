@@ -40,7 +40,7 @@ module.exports = class Product {
   }
 
   static findById(prodId,cb) {
-    const requiredProduct=products.find(product => prodId === product.id.toString() );
+     const requiredProduct=products.find((product) => prodId === product.id.toString());
     cb(requiredProduct)
    }
 };
