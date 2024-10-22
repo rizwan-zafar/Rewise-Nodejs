@@ -1,22 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 const p = path.join(__dirname, "../", "data", "product.json");
-const products = [];
+let products = [];
 
 module.exports = class Product {
   constructor(t) {
     this.id = t.id;
     this.title = t.title;
-    this.price=t.price;
-    this.description=t.description;
-    this.imageUrl=t.imageUrl
+    this.price = t.price;
+    this.description = t.description;
+    this.imageUrl = t.imageUrl;
   }
   save() {
-
     // first we are reading content from file then adding new object and writing file
-  
+
     fs.readFile(p, (error, fileContent) => {
-      let products = [];
       try {
         if (!error) {
           products = JSON.parse(fileContent);
@@ -32,14 +30,17 @@ module.exports = class Product {
   }
 
   static fetchAll(cb) {
-
-    fs.readFile(p,(error,fileContent)=>{
-        if(error)
-        {
-            cb([])
-        }
-
-       cb(JSON.parse(fileContent))
-    })
+    fs.readFile(p, (error, fileContent) => {
+      if (error) {
+        cb([]);
+      }
+      products = JSON.parse(fileContent);
+      cb(JSON.parse(fileContent));
+    });
   }
+
+  static findById(prodId,cb) {
+    const requiredProduct=products.find(product => prodId === product.id.toString() );
+    cb(requiredProduct)
+   }
 };
