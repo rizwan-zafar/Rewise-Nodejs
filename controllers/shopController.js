@@ -19,11 +19,21 @@ exports.getIndex = (req, resp, send) => {
 
 exports.getProductDetail = (req, resp, send) => {
   const productId = req.params.id;
-  Product.findById(productId,product => {
+  Product.findById(productId, (product) => {
     resp.render("shop/product-detail", {
       docTitle: product.title,
       path: "/products",
-      product:product
+      product: product,
     });
   });
 };
+
+exports.getMyCart = (req, resp, next) => {
+  resp.render("shop/cart", { docTitle: "Cart", path: "/cart" });
+};
+
+exports.postCart=(req, resp, next) => {
+    console.log("add to card", req.params.id);
+  }
+
+///////////////// Cart Function //////////////

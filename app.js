@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 
 const shopeRoutes = require("./routes/shop");
 const adminRoutes = require("./routes/admin");
+const cartRoutes  = require("./routes/cart")
 const path = require("path");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,6 +16,10 @@ app.set("views", "views"); //2nd parameter will be name of folder where are view
 
 app.use("/", shopeRoutes);
 app.use("/admin", adminRoutes); //i have added '/admin' so now in url we need to add just /admin/routeinadmin
+app.use("/cart", cartRoutes)
+
+
+ 
 
 //try yourself to add controller for 404 page if you wish
 app.use((req, resp, next) =>
