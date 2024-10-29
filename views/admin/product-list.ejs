@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="/css/admin-productlist.css">
   <%- include('../includes/navbar.ejs') %>
     <main>
-      <div class="product-table-container">
+      <div class="product-table-container"> 
         <% if(products.length>0 ){ %>
           <table class="product-table">
             <thead>
@@ -34,9 +34,12 @@
                     <%= product.price %>$
                   </td>
                   <td class="product-actions">
+                    <a href="/admin/edit-product/<%= product.id %>">
                     <button class="edit-btn" data-tooltip="Edit Product">
+                      
                        <img src="/icons/pen-to-square-solid.svg" alt="Delete Icon" class="icon-img"> 
                     </button>
+                  </a>
                     <button class="delete-btn" data-tooltip="Delete Product">
                         <img src="/icons/trash-solid.svg" alt="Delete Icon" class="icon-img"> 
                     </button>

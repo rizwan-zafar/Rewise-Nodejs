@@ -26,6 +26,6 @@ app.use((req, resp, next) =>
   resp.status(404).render("404", { docTitle: "404 - Not Found" })
 );
 
-app.listen(3000, () => {
-  console.log("Servar Started on Port : 3000");
+app.listen(2024, () => {
+  console.log("Servar Started on Port : 2024");
 });
